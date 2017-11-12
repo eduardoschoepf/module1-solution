@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+ <script src="app.js"></script>
+<body ng-app="LunchCheck">
+    <div>Info : The empty element is not taken into account.</div><br/>
+    <div ng-controller="LunchCheckController">
+        <input ng-model="elements"/>
+        <button ng-click="checkElements()">Enter</button><br/>
+        <span >Result : {{msn}}</span>
+    </div>
+</body>
+</html>
