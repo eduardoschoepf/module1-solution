@@ -9,16 +9,15 @@ angular.module('LunchCheck', [])
         $scope.msn = msn.empty;
 
         $scope.checkElements = function () {
-            var message = msn.empty;
+            $scope.msn = msn.empty;
             if($scope.elements && $scope.elements.split) {
                 var elements = $scope.elements.split(',');
                 if(elements.length <= 3) {
-                    message = msn.success;
+                    $scope.msn = msn.success;
                 } else {
-                    message = msn.fail;
+                    $scope.msn = msn.fail;
                 }
             }
-            $scope.msn = message;
         };
 
     }]);
